@@ -5,12 +5,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Anton">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-          <script src="app.js"></script>
-          <script src="listingController.js"></script>
-          <script src="listingFactory.js"></script>
   </head>
 
   <body ng-app="directoryApp">
@@ -42,7 +36,7 @@
                 </tr>
             </table>
           </div>
-          <br />
+<br />
 
             <div class="jumbotron table-responsive" style="background-color: rgb(0, 45, 179)">
               <h2>Listing Details</h2>
@@ -63,10 +57,17 @@
                <p>  <input type="number" ng-model="latitude"></p>
                <p>Longitude:</p>
                <p> <input type="number" ng-model="longitude"></p>
-               <p><button type="button" class="btn btn-default btn-SM"  ng-click ="newListing()">ADD LISTING</button></p>
+               <p><button type="button" class="btn btn-default btn-SM"  ng-click ="addListing()">ADD LISTING</button>
+                      </p>
               </div>
           </div>
       </div>
     </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+          <script src="app.js"></script>
+          <script src="listingController.js"></script>
+          <script src="listingFactory.js"></script>
   </body>
 </html>
