@@ -1,8 +1,49 @@
-#searchBar {
-  margin: 15px 10px;
+h1, h2 {
+  text-align: center;
+  color: DarkOrange;
+  text-decoration: underline;
 }
 
-.tableWrapper {
-  max-height: 400px;
+p {
+color: DarkOrange;
+background-color: rgb(42, 26, 185);
+font-family: 'Raleway', sans-serif;
+font-size: 30px;
+}
+
+td {
+  font-weight: bold;
+}
+.details {
+  background-color: rgb(43, 32, 141);
+}
+
+.listingViewer {
+  max-height: 300px;
   overflow: auto;
+}
+
+table {
+  color: DarkOrange;
+  background-color: rgb(30, 17, 144);
+
+}
+
+.btn {
+  background-color: lightBlue;
+  color: rgb(179, 98, 0);
+}
+
+.container {
+  background-color: DarkBlue;
+}
+
+.jumbotron {
+  text-indent: 5px;
+}
+#searchBar {
+  color: DarkOrange;
+  background-color: rgb(36, 28, 110);
+  margin: 25px ;
+  padding: 5px;
 }
