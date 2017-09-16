@@ -1,4 +1,3 @@
-
 'use strict';
 /*
   Import modules/files you may need to correctly run the script.
@@ -16,25 +15,32 @@ mongoose.connect(config.db.uri);
 
 var findLibraryWest = function() {
 
-   Listing.find({ name: 'Library West' }, function(err, libWestListing){
-    if(err) throw err;
-    console.log(libWestListing);
-   });
-};
+   Listing.find({ 
+     name: 'Library West' }, 
+     function(err, libWestListing){
+       if(err) throw err;
+          console.log(libWestListing);
+               });
+  };
 
 var removeCable = function() {
-   Listing.findOneAndRemove({ code: 'CABL' }, function(err, cableListing){
-    if(err) throw err;
-    console.log(cableListing);
-   });
-};
+   Listing.findOneAndRemove({ 
+     code: 'CABL' }, 
+     function(err, cableListing){
+      if(err) throw err;
+         console.log(cableListing);
+                });
+  };
 
 var updatePhelpsLab = function() {
-   var newAddress = 'Gainesville, FL 32603';
-   Listing.findOneAndUpdate({ name: 'Phelps Laboratory' }, { address: newAddress }, function(err, phelpsListing) {
-    if(err) throw err;
-    phelpsListing.address = newAddress;
-    console.log(phelpsListing);
+   var updateAddress = 'Gainesville, FL 32603';
+   Listing.findOneAndUpdate(
+     { name: 'Phelps Laboratory' }, 
+     { address: updatedAddress }, 
+     function(err, phelpsListing) {
+        if(err) throw err;
+        phelpsListing.address = updatedAddress;
+            console.log(phelpsListing);
   });
 };
 
