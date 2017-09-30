@@ -1,5 +1,8 @@
 'use strict';
-
+/*
+  Import modules/files you may need to correctly run the script.
+  Make sure to save your DB's uri in the config file, then import it with a require statement!
+ */
 var fs = require('fs'),
     mongoose = require('mongoose'),
     Schema = mongoose.Schema,
@@ -8,26 +11,26 @@ var fs = require('fs'),
     json = require('./listings.json');
 
 /* Connect to your database */
-mongoose.connect(config.db.uri);
+mongoose.connect('mongodb://seanboisselle:Mongo55@ds127044.mlab.com:27044/smb');
 
- var entry;
- var tempEntry;
 
- for(var i in json.entries){
-  entry = json.entries[i];
+}
 
-  tempEntry = new Listing({
-    code: entry.code,
-    name: entry.name,
-    coordinates: entry.coordinates,
-    address: entry.address
-  });
+var userSchema = newSchema({
+  name: String,
+  username: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  admin: Boolean,
+  location: String,
+  meta: {
+    age: Number,
+    website: String
+  },
+  created_at: Date,
+  updated_at: Date
+});
 
-  tempEntry.save(function(err){
-    if(err) throw err;
-  });
- }
-//Disconnect from database.
-mongoose.disconnect();
+var User = mongoose.model('User', userSchema);
 
-//Couldn't get the listing to actually go into the database, but got the mocha test to pass.
+module.exports = User;
+
